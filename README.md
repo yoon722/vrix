@@ -19,7 +19,7 @@
 1. GOM meme
 
 ## GOMTV - PROT 300* 
-1. GOMTV (마크업 없음 히스토리 쌓는 중)
+1. GOMTV
 2. GOMTV Mobile
 3. GOMTV Mini web
 4. nmp
