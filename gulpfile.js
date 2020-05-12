@@ -90,7 +90,7 @@ function img() {
           plugins: [
             {removeTitle: true},
             {removeDesc: true},
-            {removeViewBox: true}
+            {removeViewBox: false} //체크를 풀어서 viewBox가 삭제되지 않아야 css로 width를 조정할 수 있다.
           ]
         })
     ]))
