@@ -8,6 +8,7 @@ const html = require('gulp-html-tag-include');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
+const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
 
 const paths = {
@@ -81,6 +82,18 @@ function js() {
 
 function img() {
   return gulp.src(paths.img.input)
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.mozjpeg({quality: 60}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
+          plugins: [
+            {removeTitle: true},
+            {removeDesc: true},
+            {removeViewBox: true}
+          ]
+        })
+    ]))
     .pipe(gulp.dest(paths.img.output))
     .pipe(browsersync.reload({stream: true}));
 }
