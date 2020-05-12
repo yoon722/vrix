@@ -88,9 +88,9 @@ function img() {
       imagemin.optipng({optimizationLevel: 5}),
       imagemin.svgo({
           plugins: [
-            {removeTitle: false}, // <title> 제거
-            {removeDesc: false}, // <desc> 제거
-            {removeViewBox: false}, // viewBox가 삭제되지 않아야 css로 width를 조정할 수 있다.
+            {removeTitle: false}, // <title> 제거안함 (접근성, 반응형 웹 디자인시 필요함)
+            {removeDesc: false}, // <desc> 제거안함 (접근성, 반응형 웹 디자인시 필요함)
+            {removeViewBox: false}, // viewBox가 삭제되지 않아야 css로 width를 조정할 수 있다. (접근성, 반응형 웹 디자인시 필요함)
             {removeDimensions: true} // viewBox 속성이 있을 경우, width/height 속성 제거
           ]
         })
