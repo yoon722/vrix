@@ -84,7 +84,7 @@ function img() {
   return gulp.src(paths.img.input)
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
-      imagemin.mozjpeg({quality: 85}),
+      imagemin.mozjpeg({quality: 85}), // 포토샵 퀄리티 60%정도와 비슷함
       imagemin.optipng({optimizationLevel: 5}),
       imagemin.svgo({
           plugins: [
