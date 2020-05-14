@@ -84,7 +84,7 @@ function img() {
   return gulp.src(paths.img.input)
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
-      imagemin.mozjpeg({quality: 60}),
+      imagemin.mozjpeg({quality: 85}),
       imagemin.optipng({optimizationLevel: 5}),
       imagemin.svgo({
           plugins: [

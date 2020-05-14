@@ -58,6 +58,7 @@ a {
 }
 .blind {
   display: block;
+  overflow: hidden;
   position: absolute;
   top: -2000em;
   left: -2000em;
