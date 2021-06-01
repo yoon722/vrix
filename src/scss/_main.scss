@@ -1,18 +1,17 @@
 .main {
   width: 100%;
-  background: #f3f3f3 url("../img/back_img.png") no-repeat 50% 0;
   .container {
     width: 1200px;
     margin: 0 auto;
   }
 }
 
-article + article {
+.cont + .cont {
   margin-top: 20px;
 }
 
-//공지사항
-.content {
+//공지사항 & 항목별 현황
+.cont {
   width: 100%;
   background-color: $white;
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.05);
@@ -26,19 +25,121 @@ article + article {
       font-size: 16px;
     }
     .more {
-      position: relative;
       float: right;
       font-size: 12px;
       color: #999;
       &::before {
-        position: absolute;
         content: "+";
         display: inline-block;
-        top: 50%;
-        transform: translateY(-50%);
-        left: -9px;
-        line-height: 1;
+        width: 7px;
+        margin-right:4px;
       }
+    }
+    .date_area {
+      float: right;
+      .date { 
+        margin-right: 14px;
+        font-size: 12px;
+        color: #999;
+      }
+    }
+  }
+  .bx_notice {
+    padding: 20px 0 20px 20px;
+    box-sizing: border-box;
+    li {
+      width: 100%;
+      height: 28px;
+      overflow: hidden;
+      font-size: 13px;
+      color: #666;
+      a {
+        display: inline-block;
+        line-height: 28px;
+        max-width: 1060px;
+        color: #666;
+        @include ellipsis;
+      }
+      .date {
+        float: right;
+        width: 120px;
+        line-height: 28px;
+        text-align: center;
+      }
+      em {
+        font-size: 12px;
+        color: #ff7342;
+      }
+    }
+    &.nodata {
+      padding: 68px 20px;
+      text-align: center;
+      li {
+        display: inline-block;
+      }
+    }
+  }
+}
+.bx_square {
+  padding: 10px 9.5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  li {
+    float: left;
+    width: 372px;
+    height: 190px;
+    border: 1px solid #dbdbdb;
+    margin: 10px 10.5px;
+    box-sizing: border-box;
+    .sq_tit {
+      padding: 15px 15px;
+      line-height: 14px;
+      font-size: 14px;
+      background-color: #f8f8f8;
+      @include ellipsis;
+      box-sizing: border-box;
+    }
+  }
+  .cell {
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    p {
+      font-size: 13px;
+      color: #666;
+      line-height: 28px;
+      .num {
+        display: inline-block;
+        color: #00a2ff;
+        font-weight: $bolder;
+      }
+    }
+  }
+  .nodata {
+    position: relative;
+    font-size: 13px;
+    color: #666;
+    line-height: 144px;
+    text-align: center;
+  }
+  .loading {
+    width: 372px;
+    height: 144px;
+    &::after{
+      content: "";
+      position: absolute;
+      display: block;
+      width: 50px;
+      height: 50px;
+      @include bg("spinner.gif");
+      background-size: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+    }
+    p, span {
+      display: none;
     }
   }
 }

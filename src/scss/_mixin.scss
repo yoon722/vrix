@@ -66,3 +66,9 @@
   line-height: 0;
   text-indent: -2000em;
 }
+
+@mixin txt_blind {
+  font-size: 0;
+  text-indent: -2000em;
+  overflow: hidden;
+}

@@ -2,14 +2,16 @@ header {
   width: 1200px;
   height: 166px;
   margin: 0 auto;
-  overflow: hidden;
   @include clear;
   .logo {
     float: left;
-    width: 172px;
-    height: 166px;
     a {
       display: block;
+      width: 172px;
+      height: 166px;
+      @include bg ("vrix_admin_logo.png");
+      background-size: 100%;
+      @include txt_blind;
     }
   }
   .wrap {
@@ -18,22 +20,78 @@ header {
     width: calc(100% - 172px);
   }
   .lnb {
-    position: absolute;
-    top: 15px;
-    right: 0;
-    display: inline-block;
-    height: 16px;
+    width: 100%;
+    padding: 15px 0;
+    text-align: right;
+    box-sizing: border-box;
+    a {
+      position: relative;
+      display: inline-block;
+      line-height: 16px;
+      color: $white;
+      font-size: 13px;
+      &+a {
+        margin-left: 19px;
+      }
+      &.nickname::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 16px;
+        vertical-align: top;
+        margin-right: 5px;
+        @include bg ("ico_id.png");
+      }
+      &.logout::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 16px;
+        vertical-align: top;
+        margin-right: 5px;
+        @include bg ("ico_logout.png");
+      }
+      &.guide::before {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 16px;
+        vertical-align: top;
+        margin-right: 5px;
+        @include bg ("ico_guide.png");
+      }
+    }
   }
   .gnb {
-    float: left;
-    padding: 50px 0 60px;
+    width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
+    padding: 0 0 0 19px;
     li {
       float: left;
       a {
-        line-height: 56px;
-        padding: 0 10px;
+        position: relative;
+        display: inline-block;
+        padding: 19px 15px;
+        color: $white;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: -0.06rem;
         box-sizing: border-box;
+        &.on {
+          color: #ff8e66;
+          font-weight: $bolder;
+        }
+      }
+      &:hover a {
+        color: #ff8e66;
+        font-weight: $bolder;
+        &::after {
+          position: absolute;
+          display: inline-block;
+          width: 40px;
+          height: 3px;
+        }
       }
     }
   }
@@ -44,12 +102,48 @@ header {
 
 footer {
   width: 1200px;
-  margin: 0 auto;
+  margin: 27px auto 100px;
   text-align: center;
   .footer_menu {
     display: inline-block;
     li {
+      position: relative;
       float: left;
+      padding: 0 12px;
+      box-sizing: border-box;
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 11px;
+        background-color: #ccc;
+      }
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
     }
+    a {
+      display: inline-block;
+      color: #777;
+      font-size: 13px;
+    }
+  }
+  .copyright {
+    font-size: 12px;
+    color: #999;
+  }
+  .footer_logo {
+    display: inline-block;
+    width: 100px;
+    height: 38px;
+    margin-top: 16px;
+    @include bg ("footer_logo.png");
+    background-size: 100%;
+    @include txt_blind;
   }
 }

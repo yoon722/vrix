@@ -1,3 +1,21 @@
-.test{
-    box-sizing: border-box;
+.s_btn {
+  position: relative;
+  width: 87px;
+  height: 29px;
+  line-height: 24px;
+  padding-left: 25px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  background-color: #f9f8f8;
+  box-sizing: border-box;
+  &.refresh::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 18px;
+    @include bg ("ico_refresh.png");
+  }
 }
