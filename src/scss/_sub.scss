@@ -1,0 +1,9 @@
+.sub {
+  width: 100%;
+  @include bg ("back_img.jpg", no-repeat, 50% 0, null,#f3f3f3);
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: $white;
+  }
+}

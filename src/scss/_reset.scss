@@ -9,7 +9,6 @@ html,body {
   font-size:15px;
   line-height: 1.6;
   color:$black;
-  @include bg ("back_img.jpg", no-repeat, 50% 0, null,#f3f3f3);
 }
 html,body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form,fieldset {
   margin:0;
