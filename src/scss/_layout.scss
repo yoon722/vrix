@@ -33,7 +33,7 @@ header {
       &+a {
         margin-left: 19px;
       }
-      &.nickname::before {
+      &.nickname:before {
         content: "";
         display: inline-block;
         width: 14px;
@@ -42,7 +42,7 @@ header {
         margin-right: 5px;
         @include bg ("ico_id.png");
       }
-      &.logout::before {
+      &.logout:before {
         content: "";
         display: inline-block;
         width: 14px;
@@ -51,7 +51,7 @@ header {
         margin-right: 5px;
         @include bg ("ico_logout.png");
       }
-      &.guide::before {
+      &.guide:before {
         content: "";
         display: inline-block;
         width: 14px;
@@ -86,7 +86,7 @@ header {
       &:hover a {
         color: #ff8e66;
         font-weight: $bolder;
-        &::after {
+        &:after {
           position: absolute;
           display: inline-block;
           width: 40px;
@@ -111,7 +111,7 @@ footer {
       float: left;
       padding: 0 12px;
       box-sizing: border-box;
-      &::after {
+      &:after {
         position: absolute;
         content: "";
         top: 50%;
@@ -122,7 +122,7 @@ footer {
         background-color: #ccc;
       }
       &:last-child {
-        &::after {
+        &:after {
           display: none;
         }
       }

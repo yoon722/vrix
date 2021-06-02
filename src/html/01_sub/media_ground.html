@@ -5,11 +5,11 @@
   <include src="../include/header.html"></include>
   <section class="container">
     <div class="bx_top">
-      <h2>지면 등록</h2>
+      <h2 class="sub_tit">지면 등록</h2>
     </div>
     <div class="bx_ground">
-      <h3>지면 정보</h3>
       <table class="tbl">
+        <caption>지면 정보</caption>
         <tr>
           <th>사업자 <em>*</em></th>
           <td colspan="3"></td>
@@ -32,42 +32,40 @@
           </td>
         </tr>
       </table>
-    </div>
-    <div class="bx_ground">
-      <h3>광고 송출 유형</h3>
       <table class="tbl">
+        <caption>광고 송출 유형</caption>
         <tr>
           <th>하우스 광고 <em>*</em></th>
           <td>
-            <input type="radio" id="" class="radio">
-            <label for="">노출</label>
-            <input type="radio" id="" class="radio">
-            <label for="">미노출</label>
+            <input type="radio" name="exposure" id="radio01" class="radio">
+            <label for="radio01">노출</label>
+            <input type="radio" name="exposure" id="radio02" class="radio">
+            <label for="radio02">미노출</label>
           </td>
         </tr>
         <tr>
           <th>pre-roll <em>*</em></th>
           <td>
-            <input type="radio" id="" class="radio">
+            <input type="radio" name="exposure" id="" class="radio">
             <label for="">노출</label>
-            <input type="radio" id="" class="radio">
+            <input type="radio" name="exposure" id="" class="radio">
             <label for="">미노출</label>
           </td>
         </tr>
         <tr>
           <th>Seekbar <em>*</em></th>
           <td>
-            <input type="radio" id="" class="radio">
+            <input type="radio" name="exposure" id="" class="radio">
             <label for="">노출</label>
-            <input type="radio" id="" class="radio">
+            <input type="radio" name="exposure" id="" class="radio">
             <label for="">미노출</label>
           </td>
         </tr>
       </table>
-    </div>
-    <div class="bx_btn">
-      <button type="button" class="btn">등록</button>
-      <button type="button" class="btn gray">취소</button>
+      <div class="bx_btn">
+        <button type="button" class="btn">등록</button>
+        <button type="button" class="btn gray">취소</button>
+      </div>
     </div>
   </section>
   <include src="../include/footer.html"></include>

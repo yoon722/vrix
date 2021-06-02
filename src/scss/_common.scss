@@ -1,21 +1,211 @@
-.s_btn {
-  position: relative;
-  width: 87px;
-  height: 29px;
-  line-height: 24px;
-  padding-left: 25px;
-  border: 1px solid #dbdbdb;
-  border-radius: 5px;
-  background-color: #f9f8f8;
+//버튼
+.btn {
+  display:inline-block;
+  font-size: 14px;
+  color: $white;
+  line-height: 1;
+  text-align:center;
+  padding: 13px 36px;
+  background-color: #2f465d;
+  border-radius: 10px;
+  box-sizing:border-box;
+  &.gray {
+    background-color: #aaa;
+  }
+  &.small {
+    padding: 10px 21px;
+    border-radius: 5px;
+  }
+  &.refresh {
+    position: relative;
+    padding: 7px 10px 7px 26px;
+    border: 1px solid #dbdbdb;
+    background-color: #f9f8f8;
+    border-radius: 5px;
+    color: #666;
+    font-size: 12px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 6px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 18px;
+      @include bg ("ico_refresh.png");
+    }
+  }
+  &.edit {
+    position: relative;
+    padding: 11px 13px 11px 35px;
+    background-color: #ff8e66;
+    border-radius: 5px;
+    font-size: 12px;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 11px;
+      transform: translateY(-50%);
+      width: 17px;
+      height: 17px;
+      @include bg ("ico_edit.png");
+    }
+  }
+}
+
+//input
+.ipt {
+  width: 50px;
+  height: 34px;
+  font-size: 14px;
+	line-height: 1;
+  padding: 0px 5px;
+  border: 1px solid #ddd; 
   box-sizing: border-box;
-  &.refresh::before {
+  &:focus{
+		outline: none;
+		border-color: #ddd;
+	}
+}
+
+//select
+.slct {
+  width: 187px;
+  height: 34px;
+  padding: 0px 20px 0 11px;
+  border: 1px solid #ddd; 
+  cursor: pointer;
+  box-sizing: border-box;
+  @include bg ("ico_arrow.png", no-repeat, 95% 50%, 9px 5px, #fff);
+  &:focus{
+		outline: none;
+		border-color: #ddd;
+	}
+}
+
+//radio 버튼
+.radio {
+  display: none;
+  & + label {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding-left: 30px;
+    line-height: 20px;
+    box-sizing: border-box;
+    @include bg("ico_radio_off.png", no-repeat, 0 50%, 20px 20px);
+    &+.radio + label {
+      margin-left: 24px;
+    }
+  }
+  &:checked + label, &.checked + label {
+		@include bg("ico_radio_on.png", no-repeat, 0 50%, 20px 20px);
+	}
+}
+
+//토글 버튼
+.bx_toggle {
+  position: relative;
+  width: 92px;
+  height: 24px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #dbdbdb;
+  background-color: #f3f3f3;
+  .chk {
+    position: relative;
+    width: 90px;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+    &:checked + .txt {
+      span {
+        color: #b8b8b8;
+        background-color: #f3f3f3;
+      }
+      &:before {
+        left: 45px;
+        color: $white;
+        background-color: #8292a2;
+      }
+    }
+  }
+  .txt {
+    z-index: 2;
     position: absolute;
-    content: "";
-    top: 50%;
-    left: 6px;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 18px;
-    @include bg ("ico_refresh.png");
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 90px;
+    height: 23px;
+    &:before, span {
+      position: absolute;
+      top: 0;
+      width: 45px;
+      height: 22px;
+      font-size: 11px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 1;
+      padding: 6px 10px;
+      border-radius: 2px;
+      transition: 0.3s ease all;
+      box-sizing: border-box;
+      border-radius: 5px;
+    }
+    &:before {
+      right: 0;
+      content: "NO";
+      color: #b8b8b8;
+      background-color: #f3f3f3;
+    }
+    span {
+      display: inline-block;
+      left: 0;
+      color: $white;
+      z-index: 1;
+      background-color: #8292a2;
+    }
+  }
+}
+
+//테이블
+.tbl {
+  width: 100%;
+  border-top: 2px solid #2f465d;
+  box-sizing: border-box;
+  &+.tbl{
+		margin-top: 40px;
+	}
+  caption{
+		display: table-caption;
+		width: 100%;
+		text-align: left;
+		font-weight: $bold;
+		padding-bottom: 14px;
+  }
+  th, td {
+    font-size: 13px;
+    color: #666;
+    line-height: 1;
+    border: 1px solid #dbdbdb;
+    em {
+      color: #ff8e66;
+    }
+  }
+  th {
+    padding: 18px 20px;
+    background-color: #f3f3f3;
+  }
+  td {
+    padding: 8px 20px;
+  }
+  thead th {
+    text-align: center;
   }
 }
