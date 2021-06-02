@@ -10,24 +10,49 @@
     <div class="bx_ground">
       <table class="tbl">
         <caption>지면 정보</caption>
+        <colgroup>
+          <col style="width:53px;">
+          <col>
+          <col style="width:160px;">
+        </colgroup>
         <tr>
           <th>사업자 <em>*</em></th>
-          <td colspan="3"></td>
+          <td colspan="3">
+            <select class="slct">
+              <option>사업자를 선택해 주세요.</option>
+              <option>사업자를 선택해 주세요.</option>
+              <option>사업자를 선택해 주세요.</option>
+            </select>
+          </td>
         </tr>
         <tr>
           <th>상태 <em>*</em></th>
-          <td colspan="3"></td>
+          <td colspan="3">
+            <div class="bx_toggle">
+              <input type="checkbox" class="chk">
+              <div class="txt">
+                <span class="left">ON</span>
+                <span class="right">OFF</span>
+              </div>
+            </div>
+          </td>
         </tr>
         <tr>
           <th>미디어명 <em>*</em></th>
-          <td></td>
+          <td>
+            <select class="slct">
+              <option>밀크뮤직</option>
+              <option>밀크뮤직</option>
+              <option>밀크뮤직</option>
+            </select>
+          </td>
           <th>미디어 유형 <em>*</em></th>
           <td>APP (AND)</td>
         </tr>
         <tr>
           <th>지면명 <em>*</em></th>
           <td colspan="3">
-            <input type="text" class="ipt">
+            <input type="text" class="ipt" style="width:600px;">
             <span>0/50</span>
           </td>
         </tr>

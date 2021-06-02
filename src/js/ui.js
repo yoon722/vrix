@@ -1,6 +1,4 @@
-/**
- * Created by GRE511 on 2019-04-16.
- */
+
 // 하위 브라우저 호환
 document.createElement("article");
 document.createElement("section");
@@ -29,3 +27,14 @@ function getInternetExplorerVersion() {
   }
   $("html").addClass("ie"+rv);
 }
+
+$(document).ready(function () {
+
+  $(".gnb > li").hover(function(){
+      $(this).addClass("on");
+      $(this).children(".sub_gnb").stop().show();
+    },function(){
+      $(this).removeClass("on");
+      $(this).children(".sub_gnb").stop().hide();
+    });
+});

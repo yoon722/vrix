@@ -65,12 +65,11 @@ header {
   .gnb {
     width: 100%;
     box-sizing: border-box;
-    overflow: hidden;
     padding: 0 0 0 19px;
     li {
+      position: relative;
       float: left;
       a {
-        position: relative;
         display: inline-block;
         padding: 19px 15px;
         color: $white;
@@ -97,6 +96,14 @@ header {
   }
   .sub_gnb {
     display: none;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 1200px;
+    transform: translateX(-50%);
+    li {
+      display: inline-block;
+    }
   }
 }
 

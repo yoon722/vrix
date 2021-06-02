@@ -16,6 +16,10 @@
     padding: 10px 21px;
     border-radius: 5px;
   }
+  &.xs {
+    padding: 4px 7px;
+    border-radius: 5px;
+  }
   &.refresh {
     position: relative;
     padding: 7px 10px 7px 26px;
@@ -60,7 +64,7 @@
   height: 34px;
   font-size: 14px;
 	line-height: 1;
-  padding: 0px 5px;
+  padding: 0px 10px;
   border: 1px solid #ddd; 
   box-sizing: border-box;
   &:focus{
@@ -71,13 +75,13 @@
 
 //select
 .slct {
-  width: 187px;
   height: 34px;
-  padding: 0px 20px 0 11px;
+  padding: 0px 24px 0 11px;
   border: 1px solid #ddd; 
   cursor: pointer;
   box-sizing: border-box;
-  @include bg ("ico_arrow.png", no-repeat, 95% 50%, 9px 5px, #fff);
+  outline: none;
+  @include bg ("ico_arrow.png", no-repeat, 90% 50%, 9px 5px, #fff);
   &:focus{
 		outline: none;
 		border-color: #ddd;
@@ -107,6 +111,7 @@
 //토글 버튼
 .bx_toggle {
   position: relative;
+  display: inline-block;
   width: 92px;
   height: 24px;
   border-radius: 5px;
@@ -123,11 +128,11 @@
     cursor: pointer;
     z-index: 3;
     &:checked + .txt {
-      span {
+      .left {
         color: #b8b8b8;
         background-color: #f3f3f3;
       }
-      &:before {
+      .right {
         left: 45px;
         color: $white;
         background-color: #8292a2;
@@ -143,7 +148,7 @@
     left: 0;
     width: 90px;
     height: 23px;
-    &:before, span {
+    span {
       position: absolute;
       top: 0;
       width: 45px;
@@ -158,13 +163,12 @@
       box-sizing: border-box;
       border-radius: 5px;
     }
-    &:before {
+    .right {
       right: 0;
-      content: "NO";
       color: #b8b8b8;
       background-color: #f3f3f3;
     }
-    span {
+    .left {
       display: inline-block;
       left: 0;
       color: $white;
@@ -177,6 +181,7 @@
 //테이블
 .tbl {
   width: 100%;
+  text-align: left;
   border-top: 2px solid #2f465d;
   box-sizing: border-box;
   &+.tbl{
@@ -206,6 +211,9 @@
     padding: 8px 20px;
   }
   thead th {
+    text-align: center;
+  }
+  .center {
     text-align: center;
   }
 }
