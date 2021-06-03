@@ -7,7 +7,7 @@
   text-align:center;
   padding: 13px 36px;
   background-color: #2f465d;
-  border-radius: 10px;
+  border-radius: 5px;
   box-sizing:border-box;
   &.gray {
     background-color: #aaa;
@@ -17,15 +17,17 @@
     border-radius: 5px;
   }
   &.xs {
-    padding: 4px 7px;
+    padding: 5px 7px;
+    font-size: 11px;
     border-radius: 5px;
+    background-color: #8292a2;
   }
   &.refresh {
     position: relative;
     padding: 7px 10px 7px 26px;
     border: 1px solid #dbdbdb;
     background-color: #f9f8f8;
-    border-radius: 5px;
+    border-radius: 3px;
     color: #666;
     font-size: 12px;
     &::before {
@@ -76,12 +78,12 @@
 //select
 .slct {
   height: 34px;
-  padding: 0px 24px 0 11px;
+  padding: 0px 32px 0 11px;
   border: 1px solid #ddd; 
   cursor: pointer;
   box-sizing: border-box;
   outline: none;
-  @include bg ("ico_arrow.png", no-repeat, 90% 50%, 9px 5px, #fff);
+  @include bg ("ico_arrow.png", no-repeat, 96% 50%, 9px 5px, #fff);
   &:focus{
 		outline: none;
 		border-color: #ddd;
@@ -100,7 +102,7 @@
     box-sizing: border-box;
     @include bg("ico_radio_off.png", no-repeat, 0 50%, 20px 20px);
     &+.radio + label {
-      margin-left: 24px;
+      margin-left: 20px;
     }
   }
   &:checked + label, &.checked + label {
@@ -199,6 +201,7 @@
     color: #666;
     line-height: 1;
     border: 1px solid #dbdbdb;
+    box-sizing: border-box;
     em {
       color: #ff8e66;
     }
@@ -215,5 +218,9 @@
   }
   .center {
     text-align: center;
+  }
+  .ad_txt {
+    display: inline-block;
+    vertical-align: middle;
   }
 }

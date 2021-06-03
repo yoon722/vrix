@@ -11,9 +11,10 @@
       <table class="tbl">
         <caption>지면 정보</caption>
         <colgroup>
-          <col style="width:53px;">
+          <col style="width:162px;">
+          <col style="width:416px;">
+          <col style="width:162px;">
           <col>
-          <col style="width:160px;">
         </colgroup>
         <tr>
           <th>사업자 <em>*</em></th>
@@ -21,7 +22,7 @@
             <select class="slct">
               <option>사업자를 선택해 주세요.</option>
               <option>사업자를 선택해 주세요.</option>
-              <option>사업자를 선택해 주세요.</option>
+              <option>사업자를 선택해 주세요. 사업자를 선택해 주세요.</option>
             </select>
           </td>
         </tr>
@@ -52,20 +53,38 @@
         <tr>
           <th>지면명 <em>*</em></th>
           <td colspan="3">
-            <input type="text" class="ipt" style="width:600px;">
+            <input type="text" class="ipt" style="width:746px;">
             <span>0/50</span>
           </td>
         </tr>
       </table>
       <table class="tbl">
         <caption>광고 송출 유형</caption>
+        <colgroup>
+          <col style="width:162px;">
+          <col style="width:226px;">
+          <col style="width:162px;">
+          <col>
+          <col style="width:162px;">
+          <col style="width:228px;">
+        </colgroup>
         <tr>
           <th>하우스 광고 <em>*</em></th>
-          <td>
+          <td colspan="3">
             <input type="radio" name="exposure" id="radio01" class="radio">
             <label for="radio01">노출</label>
             <input type="radio" name="exposure" id="radio02" class="radio">
             <label for="radio02">미노출</label>
+            <div class="ad_txt">
+              (하우스 광고 프리퀀시 <em class="ico info">?</em> : 60분 <input type="text" class="ipt"> 번)
+            </div>
+          </td>
+          <th>nonlinear광고 <em>*</em></th>
+          <td>
+            <input type="radio" name="exposure" id="radio03" class="radio">
+            <label for="radio03">노출</label>
+            <input type="radio" name="exposure" id="radio04" class="radio">
+            <label for="radio04">미노출</label>
           </td>
         </tr>
         <tr>
@@ -76,10 +95,86 @@
             <input type="radio" name="exposure" id="" class="radio">
             <label for="">미노출</label>
           </td>
+          <th>Mid-roll <em>*</em></th>
+          <td>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">노출</label>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">미노출</label>
+          </td>
+          <th>post-roll <em>*</em></th>
+          <td>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">노출</label>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">미노출</label>
+          </td>
         </tr>
         <tr>
           <th>Seekbar <em>*</em></th>
+          <td colspan="5">
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">노출</label>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">미노출</label>
+          </td>
+        </tr>
+      </table>
+      <table class="tbl">
+        <caption>광고 송출 유형</caption>
+        <colgroup>
+          <col style="width:162px;">
+          <col style="width:226px;">
+          <col style="width:162px;">
+          <col>
+          <col style="width:162px;">
+          <col style="width:228px;">
+        </colgroup>
+        <tr>
+          <th>하우스 광고 <em>*</em></th>
+          <td colspan="3">
+            <input type="radio" name="exposure" id="radio01" class="radio">
+            <label for="radio01">노출</label>
+            <input type="radio" name="exposure" id="radio02" class="radio">
+            <label for="radio02">미노출</label>
+            <div class="ad_txt">
+              (하우스 광고 프리퀀시 <em class="ico info">?</em> : 60분 <input type="text" class="ipt"> 번)
+            </div>
+          </td>
+          <th>nonlinear광고 <em>*</em></th>
           <td>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">노출</label>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">미노출</label>
+          </td>
+        </tr>
+        <tr>
+          <th>pre-roll <em>*</em></th>
+          <td>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">노출</label>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">미노출</label>
+          </td>
+          <th>Mid-roll <em>*</em></th>
+          <td>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">노출</label>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">미노출</label>
+          </td>
+          <th>post-roll <em>*</em></th>
+          <td>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">노출</label>
+            <input type="radio" name="exposure" id="" class="radio">
+            <label for="">미노출</label>
+          </td>
+        </tr>
+        <tr>
+          <th>Seekbar <em>*</em></th>
+          <td colspan="5">
             <input type="radio" name="exposure" id="" class="radio">
             <label for="">노출</label>
             <input type="radio" name="exposure" id="" class="radio">

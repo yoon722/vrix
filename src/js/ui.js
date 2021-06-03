@@ -8,6 +8,17 @@ document.createElement("header");
 document.createElement("footer");
 document.createElement("main");
 
+$(function () {
+
+  
+});
+
+
+
+
+
+
+
 // IE 하위 브라우저에 .ie_old 클래스 추가 => 프로젝트에 따라 변경될 수 있습니다.
 getInternetExplorerVersion();
 function getInternetExplorerVersion() {
@@ -27,14 +38,3 @@ function getInternetExplorerVersion() {
   }
   $("html").addClass("ie"+rv);
 }
-
-$(document).ready(function () {
-
-  $(".gnb > li").hover(function(){
-      $(this).addClass("on");
-      $(this).children(".sub_gnb").stop().show();
-    },function(){
-      $(this).removeClass("on");
-      $(this).children(".sub_gnb").stop().hide();
-    });
-});
