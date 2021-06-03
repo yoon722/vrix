@@ -7,8 +7,8 @@
     <div class="bx_top">
       <h2 class="sub_tit">광고 편성 전략관리</h2>
       <div class="tab_btns">
-        <button type="button" onclick="fnTab(this,'contents')" class="on">컨텐츠</button>
-        <button type="button" onclick="fnTab(this,'video_length')" class="">영상길이</button>
+        <button type="button" onclick="fnTab(this,'contents')" class="on"><span>컨텐츠</span></button>
+        <button type="button" onclick="fnTab(this,'video_length')" class=""><span>영상길이</span></button>
       </div>
       <div class="tab_cont active" data-tab="contents">
         <table class="search_tp">
@@ -25,20 +25,20 @@
           </tr>
           <tr>
             <th>영상길이 :</th>
-            <td><input type="text" class="ipt"> 초 ~ <input type="text" class="ipt"> 초</td>
+            <td><input type="text" class="ipt" style="width:50px;"> 초 ~ <input type="text" class="ipt" style="width:50px;"> 초</td>
           </tr>
           <tr>
             <th>광고수 :</th> 
-            <td><input type="text" class="ipt"> 개</td>
+            <td><input type="text" class="ipt" style="width:50px;"> 개</td>
           </tr>
           <tr>
             <th>상태 :</th>
             <td>
-              <input type="radio" name="use" id="radio01" class="radio">
+              <input type="radio" name="group01" id="radio01" class="radio">
               <label for="radio01">전체</label>
-              <input type="radio" name="use" id="radio02" class="radio">
+              <input type="radio" name="group01" id="radio02" class="radio">
               <label for="radio02">사용</label>
-              <input type="radio" name="use" id="radio03" class="radio">
+              <input type="radio" name="group01" id="radio03" class="radio">
               <label for="radio03">미사용</label>
             </td>
           </tr>

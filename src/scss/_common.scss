@@ -1,3 +1,12 @@
+//아이콘
+.ico_info {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  @include txt_blind;
+  @include bg ("ico_info.png", no-repeat, 0 0);
+}
+
 //버튼
 .btn {
   display:inline-block;
@@ -19,7 +28,7 @@
   &.xs {
     padding: 5px 7px;
     font-size: 11px;
-    border-radius: 5px;
+    border-radius: 3px;
     background-color: #8292a2;
   }
   &.refresh {
@@ -62,7 +71,6 @@
 
 //input
 .ipt {
-  width: 50px;
   height: 34px;
   font-size: 14px;
 	line-height: 1;
@@ -84,6 +92,7 @@
   box-sizing: border-box;
   outline: none;
   @include bg ("ico_arrow.png", no-repeat, 96% 50%, 9px 5px, #fff);
+  overflow: hidden;
   &:focus{
 		outline: none;
 		border-color: #ddd;
@@ -116,7 +125,7 @@
   display: inline-block;
   width: 92px;
   height: 24px;
-  border-radius: 5px;
+  border-radius: 3px;
   box-sizing: border-box;
   border: 1px solid #dbdbdb;
   background-color: #f3f3f3;
@@ -163,7 +172,7 @@
       border-radius: 2px;
       transition: 0.3s ease all;
       box-sizing: border-box;
-      border-radius: 5px;
+      border-radius: 3px;
     }
     .right {
       right: 0;
@@ -184,17 +193,20 @@
 .tbl {
   width: 100%;
   text-align: left;
+  margin-top: 16px;
   border-top: 2px solid #2f465d;
   box-sizing: border-box;
   &+.tbl{
-		margin-top: 40px;
+		margin-top: 46px;
 	}
   caption{
 		display: table-caption;
 		width: 100%;
 		text-align: left;
 		font-weight: $bold;
-		padding-bottom: 14px;
+    font-size: 14px;
+    padding-left: 10px;
+		padding-bottom: 8px;
   }
   th, td {
     font-size: 13px;
@@ -204,6 +216,9 @@
     box-sizing: border-box;
     em {
       color: #ff8e66;
+    }
+    &.tp2 {
+      padding: 15px 20px;
     }
   }
   th {
@@ -219,8 +234,38 @@
   .center {
     text-align: center;
   }
+  .ver_top {
+    vertical-align: top;
+  }
   .ad_txt {
     display: inline-block;
     vertical-align: middle;
+  }
+
+  //문구 + input, 문구 + select
+  .wrap_types {
+    margin-top: 15px;
+    strong {
+      display: block;
+      width: 100%;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .box {
+      display: block;
+      width: 100%;
+      // @include clear;
+      line-height: 34px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .left {
+        display: inline-block;
+      }
+      .right {
+        float: right;
+      }
+    }
   }
 }
