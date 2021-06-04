@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ko">
-<include src="../include/head.html" title="[main | Vrix]"></include>
+<include src="../include/head.html" title="Vrix | main"></include>
 <body class="main">
   <include src="../include/header.html"></include>
   <section class="container">
-    <div class="cont">
+    <article class="cont">
       <div class="top_tit">
         <h2>공지사항</h2>
         <a class="more" href="#" title="더보기">더보기</a>
       </div>
       <ul class="bx_notice">
-        <li><a href="#" title="Vrix 정기 서비스 점검 안내">Vrix 정기 서비스 점검 안내 <em>New</em></a> <span class="date">2017.08.01</span></li>
-        <li><a href="#" title="Vrix 정기 서비스 점검 안내">Vrix 정기 서비스 점검 안내</a> <span class="date">2017.08.01</span></li>
-        <li><a href="#" title="Vrix 정기 서비스 점검 안내">Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내</a> <span class="date">2017.08.01</span></li>
-        <li><a href="#" title="Vrix 정기 서비스 점검 안내">Vrix 정기 서비스 점검 안내</a> <span class="date">2017.08.01</span></li>
-        <li><a href="#" title="Vrix 정기 서비스 점검 안내">Vrix 정기 서비스 점검 안내</a> <span class="date">2017.08.01</span></li>
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내 Vrix 정기 서비스 점검 안내</span> <em>New</em> <span class="date">2017.08.01</span></a></li>
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내</span> <em>New</em><span class="date">2017.08.01</span></a></li>
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내</span> <span class="date">2017.08.01</span></a></li>
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내</span> <span class="date">2017.08.01</span></a></li>
+        <li><a href="#" title="Vrix 정기 서비스 점검 안내"><span class="txt">Vrix 정기 서비스 점검 안내</span> <span class="date">2017.08.01</span></a></li>
       </ul>
 
       <!-- S: 데이터가 없을 경우 -->
@@ -22,8 +22,8 @@
         <li>등록된 공지사항이 없습니다.</li>
       </ul> -->
       <!-- E: 데이터가 없을 경우 -->
-    </div>
-    <div class="cont">
+    </article>
+    <article class="cont">
       <div class="top_tit">
         <h2>항목별 현황</h2>
         <div class="date_area">
@@ -31,47 +31,47 @@
           <button class="btn refresh" type="button">새로고침</button>
         </div>
       </div>
-      <ul class="bx_square">
-        <li>
+      <div class="bx_square">
+        <div class="wrap">
           <h3 class="sq_tit">문의현황</h3>
           <div class="nodata"> <!-- 데이터 없는 경우 -->
             <span>현황을 가져오는데 실패하였습니다.</span>
           </div>
-        </li>
-        <li>
+        </div>
+        <div class="wrap">
           <h3 class="sq_tit">컨텐츠 Mid-roll 요청 현황</h3>
-          <div class="cell loading"><!-- 로딩중일때에는 class .loading 추가 -->
-            <p>요청 수<span>(분석중)</span>: <a class="num" href="#" title="5">5</a>건</p>
-            <p>분석완료: <a class="num" href="#" title="3">3</a>건</p>
-            <p>관리자 컨펌 대기 <a class="num" href="#" title="3">3</a>건</p>
-            <p>분석완료</p>
-          </div>
-        </li>
-        <li>
+          <ul class="cell loading"><!-- 로딩중일때에는 class .loading 추가 -->
+            <li>요청 수<span>(분석중)</span>: <a class="num" href="#" title="5">5</a>건</li>
+            <li>분석완료: <a class="num" href="#" title="3">3</a>건</li>
+            <li>관리자 컨펌 대기 <a class="num" href="#" title="3">3</a>건</li>
+            <li>분석완료</li>
+          </ul>
+        </div>
+        <div class="wrap">
           <h3 class="sq_tit">문의현황</h3>
-          <div class="cell">
-            <p>문의 접수<span>(처리중)</span>: <a class="num" href="#" title="5">5</a>건</p>
-            <p>문의 답변: <a class="num" href="#" title="3">3</a>건</p>
-          </div>
-        </li>
-        <li>
+          <ul class="cell">
+            <li>문의 접수<span>(처리중)</span>: <a class="num" href="#" title="5">5</a>건</li>
+            <li>문의 답변: <a class="num" href="#" title="3">3</a>건</li>
+          </ul>
+        </div>
+        <div class="wrap">
           <h3 class="sq_tit">문의현황</h3>
-          <div class="cell">
-            <p>문의 접수<span>(처리중)</span>: <a class="num" href="#" title="5">5</a>건</p>
-            <p>문의 답변: <a class="num" href="#" title="3">3</a>건</p>
-          </div>
-        </li>
-        <li>
+          <ul class="cell">
+            <li>문의 접수<span>(처리중)</span>: <a class="num" href="#" title="5">5</a>건</li>
+            <li>문의 답변: <a class="num" href="#" title="3">3</a>건</li>
+          </ul>
+        </div>
+        <div class="wrap">
           <h3 class="sq_tit">사용자 현황</h3>
-          <div class="cell">
-            <p>관리자: <a class="num" href="#" title="1">1</a>명</p>
-            <p>파트너: <a class="num" href="#" title="2">2</a>명</p>
-            <p>AD Network: <a class="num" href="#" title="4">4</a>명</p>
-            <p>Publisher: <a class="num" href="#" title="1">1</a>명</p>
-          </div>
-        </li>
-      </ul>
-    </div>
+          <ul class="cell">
+            <li>관리자: <a class="num" href="#" title="1">1</a>명</li>
+            <li>파트너: <a class="num" href="#" title="2">2</a>명</li>
+            <li>AD Network: <a class="num" href="#" title="4">4</a>명</li>
+            <li>Publisher: <a class="num" href="#" title="1">1</a>명</li>
+          </ul>
+        </div>
+      </div>
+    </article>
   </section>
   <include src="../include/footer.html"></include>
 </body>

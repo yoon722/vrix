@@ -11,7 +11,7 @@ header {
       height: 166px;
       @include bg ("vrix_admin_logo.png");
       background-size: 100%;
-      @include txt_blind;
+      @include blind;
     }
   }
   .wrap {
@@ -77,23 +77,23 @@ header {
         color: $white;
         font-size: 20px;
         line-height: 20px;
-        letter-spacing: -0.06rem;
+        letter-spacing: -0.06em;
         box-sizing: border-box;
-        &.on {
-          color: #ff8e66;
-          font-weight: $bolder;
-          &:after {
-            position: absolute;
-            content: "";
-            bottom: 0;
-            left: 50%;
-            margin-left: -20px;
-            display: inline-block;
-            width: 40px;
-            height: 3px;
-            background-color: #ff8e66;
-            border-radius: 10px;
-          }
+      }
+      &.on > a{
+        color: $point;
+        font-weight: $bold;
+        &:after {
+          position: absolute;
+          content: "";
+          bottom: 0;
+          left: 50%;
+          margin-left: -20px;
+          display: inline-block;
+          width: 40px;
+          height: 3px;
+          background-color: $point;
+          border-radius: 10px;
         }
       }
     }
@@ -105,6 +105,7 @@ header {
     left: 50%;
     transform: translateX(-50%);
     width: 1000px;
+    height: 30px;
     text-align: center;
     &.on {
       display: block;
@@ -114,12 +115,12 @@ header {
       display: inline-block;
       color: $white;
       font-size: 16px;
-      letter-spacing: -0.06rem;
+      letter-spacing: -0.06em;
       padding: 0 12px;
       box-sizing: border-box;
       &.on {
-        color: #ff8e66;
-        font-weight: $bolder;
+        color: $point;
+        font-weight: $bold;
       }
       &:after {
         position: absolute;
@@ -184,6 +185,6 @@ footer {
     margin-top: 16px;
     @include bg ("footer_logo.png");
     background-size: 100%;
-    @include txt_blind;
+    @include blind;
   }
 }
