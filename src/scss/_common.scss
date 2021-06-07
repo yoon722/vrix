@@ -85,6 +85,12 @@
 		border-color: #ddd;
 	}
 }
+//체크박스
+.chk {
+  & + label {
+    cursor: pointer;
+  }
+}
 
 //select
 .slct {
@@ -257,7 +263,6 @@
     .box {
       display: block;
       width: 100%;
-      // @include clear;
       line-height: 34px;
       margin-bottom: 10px;
       &:last-child {

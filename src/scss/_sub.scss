@@ -33,23 +33,33 @@
 .tab_btns {
   padding: 0 30px;
   box-sizing: border-box;
-  button {
-    position: relative;
-    top: 2px;
+  li {
     display: inline-block;
-    color: #666;
-    padding: 9px 30px;
-    text-align: center;
-    background-color: #d4d4d4;
-    box-sizing: border-box;
-    z-index: 2;
-    letter-spacing: -0.06em;
-    &.on {
+    &.on button {
       border: 1px solid #d4d4d4;
       border-bottom-color: #f3f3f3;
       background-color: #f3f3f3;
       color: $black;
       box-shadow: 1px 1px 0 $white inset; 
+    }
+    button {
+      position: relative;
+      top: 2px;
+      display: inline-block;
+      color: #666;
+      padding: 9px 30px;
+      text-align: center;
+      background-color: #d4d4d4;
+      box-sizing: border-box;
+      z-index: 2;
+      letter-spacing: -0.06em;
+      // &.on {
+      //   border: 1px solid #d4d4d4;
+      //   border-bottom-color: #f3f3f3;
+      //   background-color: #f3f3f3;
+      //   color: $black;
+      //   box-shadow: 1px 1px 0 $white inset; 
+      // }
     }
   }
 }
