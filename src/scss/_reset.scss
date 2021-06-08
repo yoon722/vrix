@@ -17,8 +17,9 @@ html,body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,form,fieldset {
 html {
   -webkit-text-size-adjust:none;
 }
-h1,h2,h3,h4,h5,h6,strong,b,th{
+h1,h2,h3,h4,h5,h6,strong,b {
   font-weight:$bold;
+  color:$bold_black;
 }
 article, aside, details, figcaption, figure, footer, header, menu, nav, section, main {display: block;}
 ul,ol,dl {
@@ -47,6 +48,7 @@ button {
   outline:none;
   padding:0px;
   line-height: 1.6;
+  color:$black;
 }
 input[type=text], input[type=password], input[type=tel], input[type=email], input[type=button], input[type=submit], input[type=reset], button, select {
   font-family:$family;

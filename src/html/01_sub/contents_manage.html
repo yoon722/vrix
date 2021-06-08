@@ -6,11 +6,11 @@
   <section class="container">
     <div class="bx_top">
       <h2 class="sub_tit">광고 편성 전략관리</h2>
-      <ul class="tab_btns">
-        <li class="on"><button type="button">컨텐츠</button></li>
-        <li><button type="button">컨텐츠</button></li>
-      </ul>
-      <div class="tab_cont active">
+      <div class="tab_btns">
+        <button type="button" onclick="fnTab(this, 'contents')" class="on">컨텐츠</button>
+        <button type="button" onclick="fnTab(this, 'video_length')">영상길이</button>
+      </div>
+      <div class="tab_cont active" data-tab="contents">
         <ul class="wrap_notice">
           <li>
             <span class="tit">구분 :</span>
@@ -47,7 +47,7 @@
         </ul>
         <button type="button" class="btn small">검색</button>
       </div>
-      <div class="tab_cont">
+      <div class="tab_cont" data-tab="viedo_length">
         <ul class="wrap_notice">
           <li>
             <span class="tit">구분 :</span>
@@ -120,11 +120,10 @@
             <td class="center">3개</td>
             <td class="center">
               <div class="bx_toggle">
-                <input type="checkbox" class="chk">
-                <div class="txt">
-                  <span class="left">YES</span>
-                  <span class="right">NO</span>
-                </div>
+                <input type="radio" name="toggles01" id="tog_btn01" class="btn_tog" checked>
+                <label for="tog_btn01">ON</label>
+                <input type="radio" name="toggles01" id="tog_btn02" class="btn_tog">
+                <label for="tog_btn02">OFF</label>
               </div>
             </td>
             <td class="center"><button type="button" class="btn xs">수정</button></td>
@@ -138,11 +137,10 @@
             <td class="center">3개</td>
             <td class="center">
               <div class="bx_toggle">
-                <input type="checkbox" class="chk">
-                <div class="txt">
-                  <span class="left">YES</span>
-                  <span class="right">NO</span>
-                </div>
+                <input type="radio" name="toggles02" id="tog_btn03" class="btn_tog" checked>
+                <label for="tog_btn03">ON</label>
+                <input type="radio" name="toggles02" id="tog_btn04" class="btn_tog">
+                <label for="tog_btn04">OFF</label>
               </div>
             </td>
             <td class="center"><button type="button" class="btn xs">수정</button></td>
@@ -156,11 +154,10 @@
             <td class="center">3개</td>
             <td class="center">
               <div class="bx_toggle">
-                <input type="checkbox" class="chk">
-                <div class="txt">
-                  <span class="left">YES</span>
-                  <span class="right">NO</span>
-                </div>
+                <input type="radio" name="toggles03" id="tog_btn05" class="btn_tog" checked>
+                <label for="tog_btn05">ON</label>
+                <input type="radio" name="toggles03" id="tog_btn06" class="btn_tog">
+                <label for="tog_btn06">OFF</label>
               </div>
             </td>
             <td class="center"><button type="button" class="btn xs">수정</button></td>
@@ -174,11 +171,10 @@
             <td class="center">3개</td>
             <td class="center">
               <div class="bx_toggle">
-                <input type="checkbox" class="chk">
-                <div class="txt">
-                  <span class="left">YES</span>
-                  <span class="right">NO</span>
-                </div>
+                <input type="radio" name="toggles04" id="tog_btn07" class="btn_tog" checked>
+                <label for="tog_btn07">ON</label>
+                <input type="radio" name="toggles04" id="tog_btn08" class="btn_tog">
+                <label for="tog_btn08">OFF</label>
               </div>
             </td>
             <td class="center"><button type="button" class="btn xs">수정</button></td>
@@ -192,11 +188,10 @@
             <td class="center">3개</td>
             <td class="center">
               <div class="bx_toggle">
-                <input type="checkbox" class="chk">
-                <div class="txt">
-                  <span class="left">YES</span>
-                  <span class="right">NO</span>
-                </div>
+                <input type="radio" name="toggles05" id="tog_btn09" class="btn_tog" checked>
+                <label for="tog_btn09">ON</label>
+                <input type="radio" name="toggles05" id="tog_btn10" class="btn_tog">
+                <label for="tog_btn10">OFF</label>
               </div>
             </td>
             <td class="center"><button type="button" class="btn xs">수정</button></td>
@@ -210,11 +205,10 @@
             <td class="center">3개</td>
             <td class="center">
               <div class="bx_toggle">
-                <input type="checkbox" class="chk">
-                <div class="txt">
-                  <span class="left">YES</span>
-                  <span class="right">NO</span>
-                </div>
+                <input type="radio" name="toggles06" id="tog_btn11" class="btn_tog" checked>
+                <label for="tog_btn11">ON</label>
+                <input type="radio" name="toggles06" id="tog_btn12" class="btn_tog">
+                <label for="tog_btn12">OFF</label>
               </div>
             </td>
             <td class="center"><button type="button" class="btn xs">수정</button></td>

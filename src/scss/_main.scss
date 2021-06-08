@@ -51,11 +51,9 @@
       width: 100%;
       height: 28px;
       font-size: 13px;
-      color: #666;
       a {
         display: block;
         line-height: 28px;
-        color: #666;
       }
       .txt {
         display: inline-block;
@@ -110,7 +108,6 @@
     box-sizing: border-box;
     li {
       font-size: 13px;
-      color: #666;
       line-height: 28px;
       .num {
         display: inline-block;
@@ -122,7 +119,6 @@
   .nodata {
     position: relative;
     font-size: 13px;
-    color: #666;
     line-height: 144px;
     text-align: center;
   }

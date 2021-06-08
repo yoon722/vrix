@@ -30,11 +30,10 @@
           <th>상태 <em>*</em></th>
           <td colspan="3">
             <div class="bx_toggle">
-              <input type="checkbox" class="chk">
-              <div class="txt">
-                <span class="left">ON</span>
-                <span class="right">OFF</span>
-              </div>
+              <input type="radio" name="toggles" id="tog_btn01" class="btn_tog" checked>
+              <label for="tog_btn01">ON</label>
+              <input type="radio" name="toggles" id="tog_btn02" class="btn_tog">
+              <label for="tog_btn02">OFF</label>
             </div>
           </td>
         </tr>
@@ -213,9 +212,51 @@
           </td>
         </tr>
       </table>
+      <table class="tbl">
+        <caption>타케팅</caption>
+        <colgroup>
+          <col style="width:162px;">
+          <col>
+        </colgroup>
+        <tr>
+          <th class="ver_top">카테고리</th>
+          <td class="tp2">
+            <input type="radio" name="group13" id="radio25" class="radio">
+            <label for="radio25">노출</label>
+            <input type="radio" name="group13" id="radio26" class="radio">
+            <label for="radio26">미노출</label>
+            <div class="wrap_types">
+              <select class="slct" style="width:120px;">
+                <option value="">Target</option>
+                <option value="">Target</option>
+                <option value="">Target</option>
+              </select>
+              <select class="slct" style="width:120px;">
+                <option value="">Target</option>
+                <option value="">Target</option>
+                <option value="">Target</option>
+              </select>
+              <button type="button" class="btn">추가</button>
+            </div>
+            <div class="wrap_types">
+              <select class="slct" style="width:120px;">
+                <option value="">Target</option>
+                <option value="">Target</option>
+                <option value="">Target</option>
+              </select>
+              <select class="slct" style="width:120px;">
+                <option value="">Target</option>
+                <option value="">Target</option>
+                <option value="">Target</option>
+              </select>
+              <button type="button" class="btn blue">제거</button>
+            </div>
+          </td>
+        </tr>
+      </table>
       <div class="bx_btn">
-        <button type="button" class="btn">등록</button>
-        <button type="button" class="btn gray">취소</button>
+        <button type="button" class="btn big">등록</button>
+        <button type="button" class="btn big gray">취소</button>
       </div>
     </div>
   </section>
