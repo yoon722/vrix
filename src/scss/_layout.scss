@@ -21,16 +21,15 @@
     position: relative;
     min-width: 580px;
     background: #fff;
-  }
-  .close {
-    position: relative;
-    top: 20px;
-    right: 20px;
-    padding: 0;
-    border-radius: 0;
-    @include ico_cancel(32px, 1px);
-    @include blind;
-    background: none;
+    .btn_close {
+      top: 20px;
+      right: 20px;
+      padding: 0;
+      border-radius: 0;
+      @include ico_cancel(32px, 2px, #000, 0, inline-block, absolute);
+      @include blind;
+      background: none;
+    }
   }
   .tit {
     padding: 20px;
@@ -54,6 +53,10 @@
     a {
       display: block;
       font-size: 13px;
+      &.ico_down {
+        padding-left: 23px;
+        @include bg("ico_download.png", no-repeat, 0 50%);
+      }
     }
   }
   .bx_close {

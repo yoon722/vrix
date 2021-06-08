@@ -23,12 +23,14 @@ $(function () {
 
 });
 
+//탭메뉴
 function fnTab(obj,tabName){ //beNX 참고 (by 정연과장님)
   var _this = obj;
   $(_this).addClass('on').siblings('button').removeClass('on');
   $('.tab_cont[data-tab="'+tabName+'"]').addClass('active').siblings('.tab_cont').removeClass('active');
 }
 
+//팝업 닫기
 function closePopup() {
 	var popup = document.querySelector('.popup');
   popup.classList.add('hide');
