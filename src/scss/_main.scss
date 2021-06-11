@@ -86,21 +86,21 @@
   padding: 10px 9.5px;
   box-sizing: border-box;
   overflow: hidden;
-  .wrap {
-    float: left;
-    width: 372px;
-    height: 190px;
-    border: 1px solid #dbdbdb;
-    margin: 10px 10.5px;
+}
+.wrap_item {
+  float: left;
+  width: 372px;
+  height: 190px;
+  border: 1px solid #dbdbdb;
+  margin: 10px 10.5px;
+  box-sizing: border-box;
+  .sq_tit {
+    padding: 15px 15px;
+    line-height: 14px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+    @include ellipsis;
     box-sizing: border-box;
-    .sq_tit {
-      padding: 15px 15px;
-      line-height: 14px;
-      font-size: 14px;
-      background-color: #f8f8f8;
-      @include ellipsis;
-      box-sizing: border-box;
-    }
   }
   .cell {
     position: relative;

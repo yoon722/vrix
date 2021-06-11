@@ -21,13 +21,25 @@ $(function () {
     $(this).hide();
   });
 
+  openTab();
+
 });
 
 //탭메뉴
-function fnTab(obj,tabName){ //beNX 참고 (by 정연과장님)
-  var _this = obj;
-  $(_this).addClass('on').siblings('button').removeClass('on');
-  $('.tab_cont[data-tab="'+tabName+'"]').addClass('active').siblings('.tab_cont').removeClass('active');
+function openTab() {
+  var tabBtn = $('.tab_btns button'); 
+  var tabCont = $('.tab_cont');  
+
+  tabCont.removeClass('active').eq(0).addClass('active');
+
+  tabBtn.click(function(){
+    var target = $(this);        
+    var index = target.index();  
+    tabBtn.removeClass('active');  
+    target.addClass('active');  
+    tabCont.removeClass('active')
+    tabCont.eq(index).addClass('active');
+  });
 }
 
 //팝업 닫기

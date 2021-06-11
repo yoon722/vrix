@@ -42,8 +42,10 @@
     background-color: #d4d4d4;
     box-sizing: border-box;
     z-index: 2;
+    font-size: 15px;
+    color: $bold_black;
     letter-spacing: -0.06em;
-    &.on {
+    &.active {
       border: 1px solid #d4d4d4;
       border-bottom-color: #f3f3f3;
       background-color: #f3f3f3;
@@ -86,15 +88,21 @@
       vertical-align: middle;
     }
   }
-  .btn.small {
+  .btn.mid {
     position: absolute;
     bottom: 30px;
     right: 32px;
   }
 }
+[data-tab-content] {
+  display: none;
+}
+.active[data-tab-content] {
+  display: block;
+}
 
 .bx_ground {
-  padding: 0 20px;
+  padding: 8px 20px;
   min-height: 770px;
   box-sizing: border-box;
   .btn.edit {

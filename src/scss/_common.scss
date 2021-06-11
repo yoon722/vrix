@@ -27,13 +27,13 @@
   &.blue {
     background-color: #8292a2;
   }
-  &.xs {
+  &.small {
     padding: 5px 7px;
     font-size: 11px;
     border-radius: 3px;
     background-color: #8292a2;
   }
-  &.small {
+  &.mid {
     padding: 10px 21px;
     border-radius: 5px;
   }
@@ -149,15 +149,16 @@
     display: none;
     & + label {
       display: inline-block;
+      width: 44px;
       font-size: 11px;
       cursor: pointer;
       text-align: center;
       line-height: 1;
-      padding: 5px 10px;
+      padding: 5px 0;
       border-radius: 3px;
       box-sizing: border-box;
     }
-    &:checked + label, &.checked + label {
+    &:checked + label {
       color: $white;
       background-color: #8292a2;
     }
@@ -168,7 +169,7 @@
 .tbl {
   width: 100%;
   text-align: left;
-  margin-top: 16px;
+  margin: 8px 0;
   border-top: 2px solid #2f465d;
   box-sizing: border-box;
   &+.tbl{
