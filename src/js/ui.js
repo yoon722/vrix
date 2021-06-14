@@ -23,24 +23,6 @@ $(function () {
 
   openTab();
 
-});
-
-//탭메뉴
-function openTab() {
-  var tabBtn = $('.tab_btns button'); 
-  var tabCont = $('.tab_cont');  
-
-  tabCont.removeClass('active').eq(0).addClass('active');
-
-  tabBtn.click(function(){
-    var target = $(this);        
-    var index = target.index();  
-    tabBtn.removeClass('active');  
-    target.addClass('active');  
-    tabCont.removeClass('active')
-    tabCont.eq(index).addClass('active');
-  });
-
   Highcharts.chart('graph_container01', {
   
     title: {
@@ -109,6 +91,24 @@ function openTab() {
       }
       }]
     }
+  });
+
+});
+
+//탭메뉴
+function openTab() {
+  var tabBtn = $('.tab_btns button'); 
+  var tabCont = $('.tab_cont');  
+
+  tabCont.removeClass('active').eq(0).addClass('active');
+
+  tabBtn.click(function(){
+    var target = $(this);        
+    var index = target.index();  
+    tabBtn.removeClass('active');  
+    target.addClass('active');  
+    tabCont.removeClass('active')
+    tabCont.eq(index).addClass('active');
   });
 }
 
