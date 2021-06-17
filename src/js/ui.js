@@ -9,24 +9,26 @@ document.createElement("footer");
 document.createElement("main");
 
 $(function () {
-  
-  //gnb
-  var _gnb = $('.gnb');
-  _gnb.find('>li>a').on('mouseenter focus',function(){
-    _gnb.find('li.on').removeClass('on').children('.sub_gnb').hide();
-    $(this).next().show().parent().addClass('on');
+  //툴팁
+  $("button[data-name=open_tooltip]").on("click", function(){
+    $(this).next('.box').addClass("on");
+      return false;
   });
-  _gnb.find('.sub_gnb').on('mouseleave',function(){
-    $(this).parent('li.on').removeClass('on');
-    $(this).hide();
+  //툴팁 외 영역 클릭하면 닫히게 
+  $("body").on('mouseup', function(e) { 
+    if(!$(".tooltip .box.on").parent().has(e.target).length) {
+      $("button[data-name=open_tooltip]").removeClass("on");
+      $(".tooltip .box").removeClass("on");
+    };
+
+    //팝업 외 영역 클릭하면 닫히게 
+    var popupCont = $('.popup');
+    if(popupCont.has(e.target).length === 0){
+      popupCont.hide();
+    }
   });
 
-  openTab();
-
-});
-
-//탭메뉴
-function openTab() {
+  //탭메뉴
   var tabBtn = $('.tab_btns button'); 
   var tabCont = $('.tab_cont');  
 
@@ -40,10 +42,10 @@ function openTab() {
     tabCont.removeClass('active')
     tabCont.eq(index).addClass('active');
   });
-}
 
-//팝업 닫기
-function closePopup() {
-	var popup = document.querySelector('.popup');
-  popup.classList.add('hide');
-}
+  //팝업 닫기
+  $('.pop_close').click(function() {
+    $(this).closest('.popup').hide();
+  });
+
+});

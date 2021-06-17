@@ -10,13 +10,6 @@
   height: 100%;
   background: rgba(0, 0, 0, .7);
   z-index: 100;
-  &.hide {
-    display: none;
-  }
-  &.has-filter {
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-  }
   .wrap_pop {
     position: relative;
     min-width: 580px;
@@ -50,13 +43,11 @@
     border-top: 1px solid #e7e7e7;
     padding: 20px;
     box-sizing: border-box;
-    a {
+    .ico_down {
       display: block;
       font-size: 13px;
-      &.ico_down {
-        padding-left: 23px;
-        @include bg("ico_download.png", no-repeat, 0 50%);
-      }
+      padding-left: 23px;
+      @include bg("ico_download.png", no-repeat, 0 50%);
     }
   }
   .bx_close {
@@ -76,6 +67,7 @@
   }
 }
 
+//헤더 & gnb
 header {
   width: 1200px;
   height: 166px;
@@ -140,24 +132,26 @@ header {
       }
     }
   }
-  .gnb {
-    width: 100%;
-    height: 58px;
-    box-sizing: border-box;
-    padding: 0 0 0 19px;
-    > li {
-      position: relative;
+}
+.gnb {
+  width: 100%;
+  height: 58px;
+  box-sizing: border-box;
+  padding: 0 0 0 19px;
+  > li {
+    position: relative;
+    display: inline-block;
+    > a {
       display: inline-block;
+      padding: 19px 15px;
+      color: $white;
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: -0.06em;
+      box-sizing: border-box;
+    }
+    &:hover {
       > a {
-        display: inline-block;
-        padding: 19px 15px;
-        color: $white;
-        font-size: 20px;
-        line-height: 20px;
-        letter-spacing: -0.06em;
-        box-sizing: border-box;
-      }
-      &.on > a, &:hover > a {
         color: $point;
         &:after {
           position: absolute;
@@ -172,52 +166,56 @@ header {
           border-radius: 10px;
         }
       }
+      .sub_gnb {
+        display: block;
+      }
+    } 
+  }
+}
+.sub_gnb {
+  display:none;
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  width: 1000px;
+  height: 40px;
+  margin-left: -500px;
+  text-align: center;
+  li {
+    position: relative;
+    display: inline-block;
+    &:hover a {
+      color: $point;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: -4px;
+      transform: translateY(-50%);
+      width: 2px;
+      height: 14px;
+      background-color: #6a8aaa;
+    }
+    &:last-child {
+      &:after {
+        display: none;
+      }
     }
   }
-  .sub_gnb {
-    display:none;
-    position: absolute;
-    top: 58px;
-    left: 50%;
-    width: 1000px;
-    height: 40px;
-    margin-left: -500px;
-    text-align: center;
-    li {
-      position: relative;
-      display: inline-block;
-      &:hover a {
-        color: $point;
-      }
-      &:after {
-        position: absolute;
-        content: "";
-        top: 50%;
-        right: -4px;
-        transform: translateY(-50%);
-        width: 2px;
-        height: 14px;
-        background-color: #6a8aaa;
-      }
-      &:last-child {
-        &:after {
-          display: none;
-        }
-      }
-    }
-    a {
-      position: relative;
-      display: inline-block;
-      color: $white;
-      font-size: 16px;
-      line-height: 40px;
-      letter-spacing: -0.06em;
-      padding: 0 12px;
-      box-sizing: border-box;
-    }
+  a {
+    position: relative;
+    display: inline-block;
+    color: $white;
+    font-size: 16px;
+    line-height: 40px;
+    letter-spacing: -0.06em;
+    padding: 0 12px;
+    box-sizing: border-box;
   }
 }
 
+//푸터
 footer {
   width: 1200px;
   margin: 27px auto 100px;

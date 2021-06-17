@@ -31,6 +31,7 @@
 
 //tab 메뉴
 .tab_btns {
+  display: flex;
   padding: 0 30px;
   box-sizing: border-box;
   button {
@@ -51,6 +52,9 @@
       background-color: #f3f3f3;
       color: $bold_black;
       box-shadow: 1px 1px 0 $white inset; 
+    }
+    &+button {
+      margin-left: 1px;
     }
   }
 }

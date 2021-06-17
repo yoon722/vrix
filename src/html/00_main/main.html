@@ -82,67 +82,62 @@
   <script>
     $(function(){
       // 하이차트
-        Highcharts.chart('graph_container01', {
-        
-        title: {
-          text: 'Vrix 연말보고서'
+      Highcharts.chart('graph_container01', {
+        credits:{ enabled:false }, //하이차트 로고 지우기
+        chart: {
+          type: 'line'
         },
-        subtitle: {
-          text: 'Source: thesolarfoundation.com'
+        title: {
+          text: '광고효과 추이'
         },
         yAxis: {
           title: {
-          text: 'Number of Employees'
-          }
+          text: ''
+          },
         },
         xAxis: {
-          accessibility: {
-          rangeDescription: 'Range: 2010 to 2017'
+          categories: ['2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06', '2015-01-06'],
+          marker: {
+            symbol: 'circle'
           }
         },
-        legend: {
-          layout: 'vertical',
-          align: 'right',
-          verticalAlign: 'middle'
-        },
         plotOptions: {
-          series: {
-          label: {
-            connectorAllowed: false
-          },
-          pointStart: 2010
+          line: {
+            dataLabels: {
+              enabled: true
+            },
+            enableMouseTracking: false,
           }
         },
         series: [{
-          name: 'Installation',
-          data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
+          name: '비활성',
+          data: [],
+          marker: {
+            symbol: 'circle',
+            fillColor: '#cccccc'
+          }
         }, {
-          name: 'Manufacturing',
-          data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
+          name: '노출수',
+          data: [5, 6, 7, 8, 14, 7, 8, 9],
+          marker: {
+            symbol: 'circle',
+            fillColor: '#ff3c4e'
+          }
         }, {
-          name: 'Sales & Distribution',
-          data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
+          name: '클릭수',
+          data: [9, 8, 7, 6, 10, 12, 4, 7],
+          marker: {
+            symbol: 'circle',
+            fillColor: '#42a8ff'
+          }
         }, {
-          name: 'Project Development',
-          data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-        }, {
-          name: 'Other',
-          data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
+          name: 'CTR(%)',
+          data: [7, 9, 12, 10, 3, 6, 9, 5],
+          marker: {
+            symbol: 'circle',
+            fillColor: '#73cb48'
+          }
         }],
-        responsive: {
-          rules: [{
-            condition: {
-              maxWidth: 500
-            },
-            chartOptions: {
-              legend: {
-                layout: 'horizontal',
-                align: 'center',
-                verticalAlign: 'bottom'
-              }
-            }
-          }]
-        }
       });
     });
   </script>
