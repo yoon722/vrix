@@ -32,7 +32,7 @@ $(function () {
   var tabBtn = $('.tab_btns button'); 
   var tabCont = $('.tab_cont');  
 
-  tabCont.removeClass('active').eq(0).addClass('active');
+  // tabCont.removeClass('active').eq(0).addClass('active');
 
   tabBtn.click(function(){
     var target = $(this);        
